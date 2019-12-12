@@ -1,0 +1,215 @@
+/*
+Author: Adam McKinlay - c0656685
+Date  : 2019-12-12
+*/
+
+/*Mobile*/
+body{
+    width: 100%;
+}
+
+#mobile_banner, #agriculture_banner{
+    border-top: black medium solid;
+    position: relative;
+    overflow: hidden;
+}
+
+#mobile_banner img, #agriculture img {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Bottom right text */
+.text_block {
+    width: 100%;
+}
+
+.text_block p, .text_block h4{
+    padding: 2em;
+}
+
+.text_block p{
+    padding-top: 0;
+}
+
+.text_block h4{
+    padding-bottom: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.tab {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    width: 100%;
+    text-align: center;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.tab button i{
+    padding-right: 0.3em;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    border-top: none;
+}
+
+.mobile_tab_heading{
+    text-align: center;
+    display: none;
+}
+
+.ql_desc{
+    text-align: center;
+    padding-top: 3em;
+}
+
+.ql_desc a{
+    text-decoration: none;
+    color: black;
+}
+
+.ql_desc p, i{
+    margin: 0;
+}
+
+.ql_desc i{
+    color: blue;
+}
+
+.ql_desc p{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#agriculture{
+    padding-top: 3em;
+}
+
+#agriculture_banner .text_block{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    color: black;
+    background-color: rgba(224, 224, 224, .65);
+}
+
+/*Tablet*/
+@media only screen and (min-width: 514px){    
+    #tab_banner img{
+        width: 100%;
+        margin: auto;
+    }
+    
+    #tab_banner{
+        display: block;
+    }
+    
+    .text_block {
+        position: absolute;
+        top: 10%;
+        bottom: 55%;
+        width: 100%;
+        color: black;
+        overflow: hidden;
+        background-color: rgba(224, 224, 224, .8);
+    }
+    
+    .tab button {
+        background-color: inherit;
+        border: none;
+        outline: none;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+    
+    #personal{
+        text-align: center;
+    }
+    
+    .tabcontent{
+        display: inline-block;
+        text-align: center;
+    }
+    
+    .ql_desc{
+        width: 45%;
+        display: inline-block;
+    }
+    
+    #agriculture_banner .text_block{
+        padding-top: 12em;
+    }
+}
+
+/*Desktop*/
+@media only screen and (min-width: 769px){    
+    #home_section{
+        text-align: center;
+    }
+    
+    #mobile_banner img, #mobile_banner .text_block{
+        width: 45%;
+        position: relative;
+    }
+    
+    #mobile_banner .text_block{
+        width: 45%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, 0%);
+    }
+    
+    #business{
+        transform: translate(10%, 0%);
+    }
+    
+    .ql_desc{
+        width: 20%;
+        display: inline-block;
+        float: left;
+    }
+    
+    #agriculture{
+        padding-top: 0;
+        margin-top: 1em;
+    }
+    
+    #agriculture_banner img{
+        margin-top: 1.5em;
+        width: 50%;
+        position: relative;
+    }
+    
+    #agriculture_banner .text_block{
+        margin-top: 1.5em;
+        width: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, 0%);
+    }
+}

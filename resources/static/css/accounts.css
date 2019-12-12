@@ -1,0 +1,101 @@
+/*
+Author: Adam McKinlay - c0656685
+Date  : 2019-12-12
+*/
+
+/*Mobile*/
+#heading, #account_summary{
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+#account_section{
+    background-color: rgba(150, 221, 120, 0.2);
+    padding-bottom: 1em;
+    padding-top: 2em;
+}
+
+.acc_card{
+    text-align: center;
+    background-color: rgba(150, 221, 120, 0.2);
+    border: 0.1em;
+    border-style: groove;
+    border-radius: 1em;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 2em;
+}
+
+.acc_sub_section{
+    background-color: white;
+    border-bottom: 0.1em solid black;
+    border-top: 0.1em solid black;
+    margin-bottom: 2em;
+}
+
+button{
+    padding: 0.7em;
+    border: none;
+    border-radius: 0.5em;
+    margin-bottom: 1em;
+}
+
+button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+.acc_sub_section ul{
+    list-style-position: inside;
+    padding: 0;
+    text-align: left;
+    padding-left: 1.5em;
+}
+
+/*Tablet*/
+@media only screen and (min-width: 514px){
+    #account_section{
+        text-align: center;
+    }
+    
+    #heading p{
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .acc_card{
+        display: inline-block;
+        width: 40%;
+    }
+    
+    .even{
+        margin-right: 3em;
+    }
+}
+
+/*Desktop*/
+@media only screen and (min-width: 769px){
+    .acc_card{
+        width: 20%;
+        margin-left: 3em;
+    }
+    
+    #heading p{
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .even{
+        margin-right: 0;
+    }
+    
+    .acc_sub_section ul{
+        list-style-position: inside;
+        padding: 0;
+        text-align: left;
+        padding-left: 4.5em;
+    }
+}

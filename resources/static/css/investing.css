@@ -1,0 +1,46 @@
+/*
+Author: Adam McKinlay - c0656685
+Date  : 2019-12-12
+*/
+
+/*Mobile*/
+#mobile_banner img{
+    width: 100%;
+}
+
+.text_block{
+    padding: 2em;
+}
+
+.text_block h3{
+    text-align: center;
+}
+
+/*Tablet*/
+@media only screen and (min-width: 514px){
+    #mobile_banner{
+        margin-top: 3em;
+        text-align: center;
+    }
+    
+    #mobile_banner img{
+        width: 90%;
+    }
+}
+
+/*Desktop*/
+@media only screen and (min-width: 769px){  
+    #home_section{
+        font-size: large;
+    }
+    
+    #mobile_banner img{
+        width: 60%;
+    }
+    
+    .text_block{
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

@@ -1,0 +1,159 @@
+@charset "ISO-8859-1";
+
+/*
+Author: Adam McKinlay - c0656685
+Date  : 2019-12-12
+*/
+
+/*Mobile*/
+#home_section{
+    padding-top: 6%;
+}
+
+#profile_header{
+    text-align: center;
+    background-color: rgba(24, 189, 24, 0.4);
+    border-bottom: 0.1em solid black;
+    border-top: 0.1em solid black;
+}
+
+#profile_header h2{
+    margin-top: 0;
+    padding-top: 1em;
+}
+
+#profile_header h3{
+    margin-bottom: 0;
+    padding-bottom: 1em;
+}
+
+#profile_info{
+    margin-top: 0;
+    padding-top: 1em;
+    display: inline-block;
+    background-color: rgba(24, 189, 24, 0.2);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 0.1em solid black;
+}
+
+#profile_info h3{
+    border-top: 0.1em solid black;
+    padding-top: 1em;
+    margin-top: 0;
+    text-align: center;
+}
+
+.profile_info_line{
+    padding-bottom: 3em;
+    display: block;
+}
+.profile_info_line p{
+    padding-top: 1em;
+    display: inline-block;
+}
+
+.profile_info_line a{
+    padding-left: 0.5em;
+    padding-right: 0.3em;
+    float: left;
+}
+
+#profile_buttons{
+    padding-top: 4em;
+    text-align: center;
+    border-bottom: 0.1em solid black;
+}
+
+button{
+    border-radius: 1.5em;
+    padding: 1em;
+    text-decoration: none;
+    border: none;
+    font-size: large;
+    background-color: rgba(24, 189, 24, 0.2);
+}
+
+#update_box{
+    display: none;
+}
+
+#accounts{
+    padding-top: 1em;
+}
+
+.user_accounts{
+    border-top: 0.02em solid gray;
+    border-bottom: 0.02em solid gray;
+}
+
+.user_accounts h4{
+    padding-right: 12em;
+    padding-left: 1em;
+}
+
+.user_accounts h4, .user_accounts p{
+    display: inline-block;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+}
+
+.transactions{
+    display: none;
+}
+
+.transactions h4{
+    display: inline-block;
+    padding-right: 15em;
+}
+
+#accounts{
+    padding-bottom: 20em;
+}
+
+/*Tablet*/
+@media only screen and (min-width: 450px){
+    #profile_info a{
+        float: none;
+    }
+}
+
+
+/*Desktop*/
+@media only screen and (min-width: 769px){
+    #home_section{
+        padding-top: 0;
+    }
+    
+    #profile_header{
+        border: none;
+    }
+
+    #profile_info{
+        padding-top: 5em;
+        text-align: center;
+        border: none;
+    }
+    
+    #profile_buttons{
+        border: none;
+        padding-top: 5em;
+    }
+    
+    #profile_info h3{
+        border: none;
+    }
+    
+    .profile_info_line{
+        display: inline-block;
+        padding-right: 4em;
+    }
+    .user_accounts h4{
+        padding-right: 109em;
+        padding-left: 1em;
+    }
+    button{
+        padding: 0.8em;
+    }
+}

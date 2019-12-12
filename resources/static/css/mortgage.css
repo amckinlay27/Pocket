@@ -1,0 +1,133 @@
+/*
+Author: Adam McKinlay - c0656685
+Date  : 2019-12-12
+*/
+
+/*Mobile*/
+#mobile_banner img{
+    width: 100%;
+}
+
+.text_block{
+    padding: 2em;
+}
+
+.text_block h3{
+    text-align: center;
+}
+
+#mortgage_cal{
+    background-color: rgba(24, 189, 24, 0.2);
+}
+
+#mortgage_cal h2{
+    text-align: center;
+}
+
+form input{
+    width: 75%;
+    padding: 0.5em;
+}
+
+#mortgage_cal{
+    padding-top: 1em;
+    padding-bottom: 2.5em;
+}
+
+#mortgage_cal form{
+    text-align: center;
+}
+
+#mortgage_cal p{
+    text-align: center;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1em;
+}
+
+.form_line{
+    padding-bottom: 1em;
+}
+
+button{
+    padding: 0.7em;
+    border: none;
+    border-radius: 0.5em;
+    margin-bottom: 1em;
+}
+
+#summary{
+    text-align: center;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+/*Tablet*/
+@media only screen and (min-width: 514px){
+    #mobile_banner{
+        margin-top: 3em;
+        text-align: center;
+    }
+    
+    #mobile_banner img{
+        width: 90%;
+    }
+    
+    form input{
+        width: 50%;
+    }
+    
+    #mortgage_cal p{
+        text-align: center;
+        width: 70%;
+        padding-bottom: 1em;
+    }
+    
+    .form_line{
+        padding-bottom: 2em;
+    }
+    
+    #summary{
+        width: 60%;
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+}
+
+/*Desktop*/
+@media only screen and (min-width: 769px){   
+    #home_section{
+        font-size: large;
+    }
+    
+    button{
+        font-size: large;
+    }
+    
+    #mobile_banner img{
+        width: 50%;
+    }
+    
+    .text_block{
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    form input{
+        width: 40%;
+    }
+    
+    .form_line{
+        padding-bottom: 3em;
+    }
+}

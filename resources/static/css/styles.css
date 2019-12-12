@@ -1,0 +1,254 @@
+/*
+Author: Adam McKinlay - c0656685
+Date  : 2019-12-12
+*/
+
+/*Mobile*/
+body{
+    margin: 0;
+    /*background-color: rgba(24, 189, 24, 0.2);*/
+}
+
+#mobile_nav{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+}
+
+.mobile_menu_icon{
+    float: left;
+    cursor: pointer;
+    margin-top: 1em;
+    margin-left: 1.5em;
+    
+}
+
+#nav_logo{
+    float: left;
+    margin-left: 28%;
+    width: 15%;
+}
+
+#user_login{
+    float: right;
+    margin-top: 0.3em;
+    margin-right: 0.5em;
+    color: rgba(24, 189, 24, 0.6);
+}
+
+.bar1, .bar2, .bar3{
+    width: 35px;
+    height: 5px;
+    background-color: rgba(24, 189, 24, 0.6);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(45deg) translate(9px, 6px);
+  transform: rotate(45deg) translate(9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(-45deg) translate(8px, -8px);
+  transform: rotate(-45deg) translate(8px, -8px);
+}
+
+#mobile_menu{
+    display: none;
+}
+
+#mobile_menu ul{
+    list-style: none;
+    padding: 0;
+    padding-top: 2em;
+}
+
+#mobile_menu ul li{
+    padding: 0.4em;
+    border-bottom: 0.1em solid black;
+}
+
+#mobile_menu ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.subp, .subb{
+    display: none;
+}
+
+.subb a, .subp a{
+    padding-left: 1.5em;
+}
+
+#mobile_footer{
+    border-top: black medium solid;
+    background-color: rgba(24, 189, 24, 0.6);
+    text-align: center;
+    width: 100%;
+}
+
+#mobile_footer ul{
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+}
+
+#mobile_footer ul li a{
+    text-decoration: none;
+}
+
+.tablet{
+    display: none
+}
+
+.desktop{
+    display: none;
+}
+
+#page_counter{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 100%;
+    border-top: 0.1em solid black;
+    border-bottom: 0.1em solid black;
+    text-align: center;
+}
+
+/*Tablet*/
+@media only screen and (min-width: 514px){
+    #nav_logo{
+        width: 8%;
+        margin-left: 18.5em;
+    }
+}
+
+/*Desktop*/
+@media only screen and (min-width: 769px){
+    .desktop{
+        display: block;
+    }
+    
+    .tablet{
+        display: block;
+    }
+    
+    .mobile{
+        display: none;
+    }
+    
+    #mobile_nav{
+        display: none;
+    }
+    
+    #header{
+        background-color: rgba(24, 189, 24, 0.6);
+        margin: 0;
+        padding: 0;
+        top: 0;
+        overflow: hidden;
+    }
+    
+    #menu{
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+    }
+    
+    #main_nav_logo img{
+        width: 4%;
+        float: left;
+        padding-left: 1em;
+    }
+    
+    #nav{
+        display: inline;
+    }
+    
+    #nav a{
+        font-size: 1.5em;
+        text-decoration: none;
+        color: black;
+        padding: 0.5em;
+    }
+    
+    #user_login_main{
+        float: right;
+    }
+    
+    #user_login{
+        color: rgba(24, 140, 24, 1);
+    }
+    
+    #user_login:hover{
+        color: white;
+    }
+
+    .dropbtn{
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+    }
+    
+    .dropdown:hover, #nav a:hover{
+        cursor: pointer;
+        background-color: white;
+    }
+
+    .dropdown-content {
+        text-align: center;
+        display: none;
+        width: 100%;
+        background-color: #f1f1f1;
+    }
+
+    .dropdown-content a {
+        font-size: 1.2em;
+        color: black;
+        padding: 1em;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+    
+    #desktop_footer{
+        text-align: center;
+        bottom: 0;
+    }
+    
+    #social{
+        display: inline-block;
+        text-align: center;
+    }
+    
+    #social i:hover{
+        color: rgba(24, 14, 24, 1);
+    }
+    
+    #footer_info a{
+        padding: 1em;
+    }
+    
+    #page_counter{
+        background-color: rgba(24, 140, 24, 0.1);
+    }
+}
+
+
+
+
+
+
+
+
+
+

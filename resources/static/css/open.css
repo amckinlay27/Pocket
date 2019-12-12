@@ -1,0 +1,70 @@
+/*
+Author: Adam McKinlay - c0656685
+Date  : 2019-12-12
+*/
+
+/*Mobile*/
+.account_type{
+    text-align: center;
+}
+
+#home_section p{
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#account_form form{
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background-color: rgba(24, 189, 24, 0.2);
+}
+
+.form_line{
+    padding-bottom: 1em;
+    padding-left: 1em;
+}
+
+form label{
+    padding-left: 1em;
+}
+
+form input{
+    width: 90%;
+    padding: 0.5em;
+}
+
+#form_end{
+    padding-top: 1em;
+    text-align: center;
+}
+
+button{
+    padding: 0.7em;
+    border: none;
+    border-radius: 0.5em;
+}
+
+button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+/*Tablet*/
+@media only screen and (min-width: 769px){
+    #home_section{
+        font-size: large;
+    }
+    
+    form{
+        text-align: center;
+    }
+    
+    form input{
+        width: 40%;
+        padding: 0.5em;
+    }
+}

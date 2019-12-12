@@ -1,0 +1,24 @@
+/*
+Author: Adam McKinlay - c0656685
+Date  : 2019-12-12
+*/
+
+/*Mobile*/
+#home_section{
+    text-align: center;
+    padding-top: 50%;
+}
+
+/*Tablet*/
+@media only screen and (min-width: 514px){
+    #home_section{
+        padding-top: 35%;
+    }
+}
+
+/*Desktop*/
+@media only screen and (min-width: 769px){
+    #home_section{
+        padding-top: 20%;
+    }
+}

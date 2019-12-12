@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pocket</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Adam McKinlay, amckinlay@mylambton.ca">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../images/LogoMakr_7KL1qX.png" type="image/png" sizes="16x16">
+		
+		 <!-- CSS -->
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link href="../css/styles.css" rel="stylesheet" type="text/css">
+        <link href="../css/open.css" rel="stylesheet" type="text/css"/>
+		
+		<!-- JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="../js/main.js" type="text/javascript"></script>
+        <script src="../js/openAcc.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <!--Mobile Menu Access-->
+        <header id="mobile_nav" class="mobile">
+            <div class="mobile_nav_contain mobile">
+                <div>
+                    <div class="mobile_menu_icon" onclick="openCloseMenu(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </div>
+                <div><div><img id="nav_logo" src="../images/LogoMakr_7KL1qX.png" alt="Logo"></div></div><!--Might need to put in div and center???-->
+                <div><a href="../login.html"><i id="user_login" class="fa fa-user fa-3x"></i></a></div>
+            </div>
+        </header>
+        
+        <!--Mobile Menu-->
+        <div id="mobile_menu" class="mobile">
+            <ul class="mobile">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../login.html">Login</a></li>
+                <li id="person_sub" onclick="openPersonalSub(this)">Personal</li>
+                <li class="subp"><a href="../personal/accounts.html">Accounts</a></li>
+                <li class="subp"><a href="../personal/investing.html">Investing</a></li>
+                <li class="subp"><a href="../personal/mortgage.html">Mortgage</a></li>
+                <li class="subp"><a href="../personal/student.html">Student</a></li>
+                <li class="subp"><a href="../personal/retirement.html">Retirement</a></li>
+                <li id="bus_sub" onclick="openBusinessSub(this)">Business</li>
+                <li class="subb"><a href="../business/accounts.html">Accounts</a></li>
+                <li class="subb"><a href="../business/entrepreneur.html">Entrepreneur</a></li>
+                <li class="subb"><a href="../business/agriculture.html">Agriculture</a></li>
+                <li class="subb"><a href="../business/services.html">Services</a></li>
+                <li><a href="../community.html">Community</a></li>
+            </ul>
+        </div>
+        
+        <!--Desktop Navbar-->
+        <header>
+            <div id="header" class="tablet">
+                <div id="menu">
+                    <div id="main_nav_logo"><img src="../images/LogoMakr_7KL1qX.png" alt=""/></div>
+                    <div id="nav">
+                        <a href="../index.html">Home</a>
+                        <a href="../login.html">Login</a>
+                        <a id="personal_drop" class="dropdown" onclick="navTabOpen('desk_personal_drop_items')">Personal</a>
+                        <a id="business_drop" class="dropdown" onclick="navTabOpen('desk_business_drop_items')">Business</a>
+                        <a href="../community.html">Community</a>
+                    </div>
+                    <div id="user_login_main"><a href="../login.html"><i id="user_login" class="fa fa-user fa-4x"></i></a></div>
+                </div>
+                
+                <!--Subnav-->
+                <div id="desk_personal_drop_items" class="dropdown-content">
+                    <a href="../personal/accounts.html">Accounts</a>
+                    <a href="../personal/investing.html">Investing</a>
+                    <a href="../personal/mortgage.html">Mortgage</a>
+                    <a href="../personal/student.html">Student</a>
+                    <a href="../personal/retirement.html">Retirement</a>
+                </div>
+                <div id="desk_business_drop_items" class="dropdown-content">
+                    <a href="../business/accounts.html">Accounts</a>
+                    <a href="../business/entrepreneur.html">Entrepreneur</a>
+                    <a href="../business/agriculture.html">Agriculture</a>
+                    <a href="../business/services.html">Services</a>
+                </div>
+            </div>
+        </header>
+		
+		<!--Main Section-->
+        <div id="home_section">
+            <div id="account_form">
+                <h1 class="account_type"></h1>
+                <p>To open a <span class="account_type"></span> account, please complete the form below. Remember, your first account receives $500.00 on us!</p>
+                <form action="#" th:action="@{/createAccount}" method="post">
+                    <h2 th:text="${user_message}"></h2>
+                    <h2 th:text="${user_message_two}"></h2>
+                    <label for="acc_Type">Account Type</label>
+                    <div class="form_line">
+                        <input type="text" id="acc_Type" th:field="*{account.type}" readonly>
+                        <p th:if="${#fields.hasErrors('account.type')}" th:errors="*{account.type}"></p>
+                    </div>
+                    
+                    <label for="firstName">First Name</label>
+                    <div class="form_line">
+                        <input type="text" id="firstName" th:field="*{client.firstName}">
+                        <p th:if="${#fields.hasErrors('client.firstName')}" th:errors="*{client.firstName}"></p>
+                    </div>
+                    
+                    <label for="lastName">Last Name</label>
+                    <div class="form_line">
+                        <input type="text" id="lastName" th:field="*{client.lastName}">
+                        <p th:if="${#fields.hasErrors('client.lastName')}" th:errors="*{client.lastName}"></p>
+                    </div>
+
+                    <label for="sin">What is your SIN Number?</label>
+                    <div class="form_line">
+                        <input type="number" id="sin" th:field="*{client.sin}">
+                        <p th:if="${#fields.hasErrors('client.sin')}" th:errors="*{client.sin}"></p>
+                    </div>
+
+                    <label for="email">What is your email address?</label>
+                    <div class="form_line">
+                        <input type="text" id="email" th:field="*{user.email}">
+                        <p th:if="${#fields.hasErrors('user.email')}" th:errors="*{user.email}"></p>
+                    </div>
+
+                    <label for="password">Enter a password</label>
+                    <div class="form_line">
+                        <input type="password" id="password" th:field="*{user.password}">
+                        <p th:if="${#fields.hasErrors('user.password')}" th:errors="*{user.password}"></p>
+                    </div>
+                    
+                    <label for="cell">What is your cell number?</label>
+                    <div class="form_line">
+                        <input type="text" id="cell" th:field="*{user.cell}">
+                        <p th:if="${#fields.hasErrors('user.cell')}" th:errors="*{user.cell}"></p>
+                    </div>
+                    
+                    <label for="province">Province</label>
+                    <div class="form_line">
+                        <input type="text" id="province" th:field="*{user.province}">
+                        <p th:if="${#fields.hasErrors('user.province')}" th:errors="*{user.province}"></p>
+                    </div>
+                    
+                    <label for="city">City</label>
+                    <div class="form_line">
+                        <input type="text" id="city" th:field="*{user.city}">
+                        <p th:if="${#fields.hasErrors('user.city')}" th:errors="*{user.city}"></p>
+                    </div>
+                    
+                    <label for="address">Address</label>
+                    <div class="form_line">
+                        <input type="text" id="address" th:field="*{user.address}">
+                        <p th:if="${#fields.hasErrors('user.address')}" th:errors="*{user.address}"></p>
+                    </div>
+                    
+                    <label for="postal">Postal Code</label>
+                    <div class="form_line">
+                        <input type="text" id="postal" th:field="*{user.postal}">
+                        <p th:if="${#fields.hasErrors('user.postal')}" th:errors="*{user.postal}"></p>
+                    </div>
+
+                    <!--Remember Rate-->
+                    <!--Remember Display Total mortgage cost and payments per cycle-->
+
+                    <div id="form_end">
+                        <button id="submit" type="submit">Submit</button>
+                    </div>
+                </form>
+                
+                <div>
+                    <p>Your login will be you email and password that you enter in the form.</p>
+                </div>
+            </div>
+            
+            <!--Footer-->
+            <footer id="mobile_footer" class="mobile">
+                <ul>
+                    <li><a href="amckinlay@mylambton.ca">Request Information</a></li>
+                    <li>Adam McKinlay &nbsp; c0656685</li>
+                    <li>© Copyright 2019 Pocket, All Rights Reserved</li>
+                </ul>
+            </footer>
+            
+            <footer id="desktop_footer" class="desktop">
+                <div id="social">
+                    <a href="https://www.facebook.com/"><i id="user_login" class="fa fa-facebook-square fa-4x"></i></a>
+                    <a href="https://www.linkedin.com/in/adam-mckinlay-812702193/"><i id="user_login" class="fa fa-linkedin-square fa-4x"></i></a>
+                    <a href="https://www.instagram.com/"><i id="user_login" class="fa fa-instagram fa-4x"></i></a>
+                    <a href="https://twitter.com/"><i id="user_login" class="fa fa-twitter fa-4x"></i></a>
+                    <a href="https://github.com/amckinlay27"><i id="user_login" class="fa fa-github fa-4x"></i></a>
+                </div>
+                
+                <div id="footer_info">
+                    <h4>Adam McKinlay: c0656685</h4>
+                    <a href="mailto:amckinlay@mylambton.ca">Request Information</a>
+                    <a href="https://github.com/amckinlay27">More Projects</a>
+                </div>                    
+            </footer>
+        </div>
+    </body>
+</html>

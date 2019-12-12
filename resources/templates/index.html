@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pocket</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Adam McKinlay, amckinlay@mylambton.ca">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="images/LogoMakr_7KL1qX.png" type="image/png" sizes="16x16">
+        
+        <!-- CSS -->
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+        <link href="css/home.css" rel="stylesheet" type="text/css">
+        
+        <!-- JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="js/main.js" type="text/javascript"></script>
+        <script src="js/home.js" type="text/javascript"></script>
+        
+    </head>
+    
+    <body>
+        <!--Mobile Menu Access-->
+        <header id="mobile_nav" class="mobile">
+            <div class="mobile_nav_contain mobile">
+                <div>
+                    <div class="mobile_menu_icon" onclick="openCloseMenu(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </div>
+                <div><div><img id="nav_logo" src="images/LogoMakr_7KL1qX.png" alt="Logo"></div></div><!--Might need to put in div and center???-->
+                <div><a href="login.html"><i id="user_login" class="fa fa-user fa-3x"></i></a></div>
+            </div>
+        </header>
+        
+        <!--Mobile Menu-->
+        <div id="mobile_menu" class="mobile">
+            <ul class="mobile">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li id="person_sub" onclick="openPersonalSub(this)">Personal</li>
+                <li class="subp"><a href="personal/accounts.html">Accounts</a></li>
+                <li class="subp"><a href="personal/investing.html">Investing</a></li>
+                <li class="subp"><a href="personal/mortgage.html">Mortgage</a></li>
+                <li class="subp"><a href="personal/student.html">Student</a></li>
+                <li class="subp"><a href="personal/retirement.html">Retirement</a></li>
+                <li id="bus_sub" onclick="openBusinessSub(this)">Business</li>
+                <li class="subb"><a href="business/accounts.html">Accounts</a></li>
+                <li class="subb"><a href="business/entrepreneur.html">Entrepreneur</a></li>
+                <li class="subb"><a href="business/agriculture.html">Agriculture</a></li>
+                <li class="subb"><a href="business/services.html">Services</a></li>
+                <li><a href="community.html">Community</a></li>
+            </ul>
+        </div>
+        
+        <!--Desktop Navbar-->
+        <header>
+            <div id="header" class="tablet">
+                <div id="menu">
+                    <div id="main_nav_logo"><img src="images/LogoMakr_7KL1qX.png" alt=""/></div>
+                    <div id="nav">
+                        <a href="index.html">Home</a>
+                        <a href="login.html">Login</a>
+                        <a id="personal_drop" class="dropdown" onclick="navTabOpen('desk_personal_drop_items')">Personal</a>
+                        <a id="business_drop" class="dropdown" onclick="navTabOpen('desk_business_drop_items')">Business</a>
+                        <a href="community.html">Community</a>
+                    </div>
+                    <div id="user_login_main"><a href="login.html"><i id="user_login" class="fa fa-user fa-4x"></i></a></div>
+                </div>
+                
+                <!--Subnav-->
+                <div id="desk_personal_drop_items" class="dropdown-content">
+                    <a href="personal/accounts.html">Accounts</a>
+                    <a href="personal/investing.html">Investing</a>
+                    <a href="personal/mortgage.html">Mortgage</a>
+                    <a href="personal/student.html">Student</a>
+                    <a href="personal/retirement.html">Retirement</a>
+                </div>
+                <div id="desk_business_drop_items" class="dropdown-content">
+                    <a href="business/accounts.html">Accounts</a>
+                    <a href="business/entrepreneur.html">Entrepreneur</a>
+                    <a href="business/agriculture.html">Agriculture</a>
+                    <a href="business/services.html">Services</a>
+                </div>
+                
+            </div>
+        </header>
+        
+        <!--Main Section-->
+        <div id="home_section">
+            
+            <!--Banner-->
+            <div id="mobile_banner">
+                <img src="images/background3.jpg" alt=""/>
+                <div class="text_block">
+                    <h4>Banking in your Pocket</h4>
+                    <p>Were more than just a bank, were a community. Our professional advisors will help guide you through your journey, and help you meet your goals. </p>
+                </div>
+            </div>
+
+            <!--Tab Headings-->
+            <div id="mobile_personal_heading" class="mobile_tab_heading">
+                <h2>Personal</h2>
+            </div>
+            <div id="mobile_Business_heading" class="mobile_tab_heading">
+                <h2>Business</h2>
+            </div>
+            
+            <!--Tab Toggle-->
+            <div id="mobile_tab_links" class="mobile_tabs">
+                <div class="tab">
+                    <button id="defaultOpen" class="tablinks" onclick="openTab('personal', 'mobile_personal_heading')"><i class="fa fa-envelope-open-o"></i>Personal</button>
+                    <button class="tablinks" onclick="openTab('business', 'mobile_Business_heading')"><i class="fa fa-paperclip"></i>Business</button>
+                </div>
+
+                <!--Personal Tab-->
+                <div id="personal" class="tabcontent">
+                    <div class="ql_desc">
+                        <i class="fa fa-dropbox fa-3x"></i>
+                        <a href="personal/accounts.html"><h3>Open an account</h3></a>
+                        <p>Pocket offers a wide variety of accounts that accommodate your banking habits. Open one right now in as little as 10 minuets, or make an appointment to meet with one of our Pocket Specialist</p>
+                    </div>
+
+                    <div class="ql_desc">
+                        <i class="fa fa-mortar-board fa-3x"></i>
+                        <a href="personal/student.html"><h3>Open a Student Account</h3></a>
+                        <p>Students can expect to carry a unique personalized banking experience within their pocket. You can  expect many of the same personal accounts offered with our Student Pocket rates.</p>
+                    </div>
+
+                    <div class="ql_desc">
+                        <i class="fa fa-money fa-3x"></i>
+                        <a href="personal/investing.html"><h3>Investing Options</h3></a>
+                        <p>Pocket offers various savings options that are sure to fit your banking needs.</p>
+                    </div>
+
+                    <div class="ql_desc">
+                        <i class="fa fa-home fa-3x"></i>
+                        <a href="personal/mortgage.html"><h3>Buying a Home</h3></a>
+                        <p>First time home buyer? Buying another home? No matter what your reason we can help guide you to your new home while keeping in mind of what is in your pocket.</p>
+                    </div>
+
+                    <div class="ql_desc mobile">
+                        <i class="fa fa-plane fa-3x"></i>
+                        <a href="personal/retirement.html"><h3>Plan for Retirement</h3></a>
+                        <p>We can help and work towards squaring away your savings for retirement, so you can finally take that trip you’ve been dreaming of.</p>
+                    </div>
+                </div>
+
+                <!--Business Tab-->
+                <div id="business" class="tabcontent">
+                    <div class="ql_desc">
+                        <i class="fa fa-briefcase fa-3x"></i>
+                        <h3>Open a Business Account</h3>
+                        <p>Pocket offers many customizable options to ensure that your business needs can be meet. Take a look at some of our account options available, and if you have any questions schedule an appointment to speak with are experts. </p>
+                    </div>
+
+                    <div class="ql_desc">
+                        <i class="fa fa-thumb-tack fa-3x"></i>
+                        <h3>Entrepreneur</h3>
+                        <p>We understand that no matter what stage your business is in, the contents of your Pocket matter. Pocket offers a wide range of services to entrepreneurs including loans, grants, advising, and much more. Stop by a Pocket Shop and speak with one of our professional to learn more.</p>
+                    </div>
+
+                    <div class="ql_desc">
+                        <i class="fa fa-cutlery fa-3x"></i>
+                        <h3>Agriculture</h3>
+                        <p>Pocket offers farmers various services to help farmers manage and track expense, grants, loans, and may other services. </p>
+                    </div>
+
+                    <div class="ql_desc">
+                        <i class="fa fa-bank fa-3x"></i>
+                        <h3>Services Available</h3>
+                        <p>You know you want to start a business but not sure where to start? Maybe you already have a business and looking at other options. Stop by our Pocket Shop and see what we can do for you.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Agriculture Banner-->
+            <div id="agriculture">
+                <div id="agriculture_banner">
+                    <img src="images/background5.jpg" alt=""/>
+                    <div class="text_block">
+                        <h4>Agriculture</h4>
+                        <p>Our team is comprised of finical experts who have worked with agriculture businesses for years. Many of our experts are farmers themselves. They understand your business financial needs rooted in agriculture. Stop by a Pocket shop and learn more.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!--Page Counter-->
+            <div id="page_counter">
+                <p>Page views: <a th:text="${views}"></a></p>
+            </div>
+            
+            <!--Footer-->
+            <footer id="mobile_footer" class="mobile">
+                <ul>
+                    <li><a href="amckinlay@mylambton.ca">Request Information</a></li>
+                    <li>Adam McKinlay &nbsp; c0656685</li>
+                    <li>© Copyright 2019 Pocket, All Rights Reserved</li>
+                </ul>
+            </footer>
+            
+            <footer id="desktop_footer" class="desktop">
+                <div id="social">
+                    <a href="https://www.facebook.com/"><i id="user_login" class="fa fa-facebook-square fa-4x"></i></a>
+                    <a href="https://www.linkedin.com/in/adam-mckinlay-812702193/"><i id="user_login" class="fa fa-linkedin-square fa-4x"></i></a>
+                    <a href="https://www.instagram.com/"><i id="user_login" class="fa fa-instagram fa-4x"></i></a>
+                    <a href="https://twitter.com/"><i id="user_login" class="fa fa-twitter fa-4x"></i></a>
+                    <a href="https://github.com/amckinlay27"><i id="user_login" class="fa fa-github fa-4x"></i></a>
+                </div>
+                
+                <div id="footer_info">
+                    <h4>Adam McKinlay: c0656685</h4>
+                    <a href="mailto:amckinlay@mylambton.ca">Request Information</a>
+                    <a href="https://github.com/amckinlay27">More Projects</a>
+                </div>                    
+            </footer>
+        </div>
+    </body>
+</html>
